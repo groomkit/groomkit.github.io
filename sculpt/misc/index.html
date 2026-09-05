@@ -1,0 +1,452 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/sculpt/misc/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>Misc Utilities - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Misc Utilities";
+        var mkdocs_page_input_path = "sculpt/misc.md";
+        var mkdocs_page_url = "/sculpt/misc/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/sculpt/misc/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="Misc Utilities - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/sculpt/misc/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Misc Utilities</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#standard-shaping-tools">Standard Shaping Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automated-workflows">Automated Workflows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-shaping-tools">🔧 Advanced Shaping Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hotkey-commands">Hotkey Commands</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sculpt</li>
+      <li class="breadcrumb-item active">Misc Utilities</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="misc-utilities-advanced-shaping-workflows">Misc Utilities: Advanced Shaping &amp; Workflows</h1>
+<p>The <strong>Misc Utilities</strong> section contains some of GroomKit's most powerful and workflow-accelerating features. This section bridges the gap between manual sculpting and procedural generation, offering tools for clumping maps, advanced deformations, and universal curve extensions.</p>
+<div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-conform.png" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-conform.png" alt="GroomKit Misc Utilities panel showing Base Mesh target snapping" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+    <span class="subtitle" style="margin-top: 2px; display: block; color: #555; text-align: center">Using Base Mesh as target for Snapping workflow.</span>
+</div>
+
+<p><br></p>
+<h2 id="standard-shaping-tools">Standard Shaping Tools</h2>
+<div class="layout-grid">
+  <!-- Target Guides Tool -->
+  <div>
+    <h3>Target Guides Tool</h3>
+    <p><em>Quickly access XGen / Utilities / Target Tool, useful in creating clumping guides.</em></p>
+    <ul>
+      <li><strong>Set Target:</strong> Makes the selected guide a target.</li>
+      <li><strong>Move Guides:</strong> Move selecting guides toward the targeted guide.</li>
+      <li><strong>Clean Up:</strong> Removes target sphere from the scene.</li>
+    </ul>
+  </div>
+  <div class="layout-img">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-target.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-target.gif" alt="Using Target Guides Tool for clumping XGen guides in Maya" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+
+  <!-- Curve/Guide Extrude -->
+  <div>
+    <hr style="margin-top: 15px;">
+    <h3>Curve/Guide Extrude</h3>
+    <p><em>Extends hair naturally by calculating the path and adding a new control point at the tip, preserving the shape.</em></p>
+    <ul>
+      <li><strong>Universal:</strong> Works with both Maya NURBS Curves and XGen Guides.</li>
+      <li><strong>Fine control:</strong> Provides exact control for shaping hair buns or curls.</li>
+    </ul>
+  </div>
+  <div class="layout-img">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-extrude.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-extrude.gif" alt="Extruding Maya NURBS curves and XGen guides while preserving shape" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+</div>
+
+<p><br></p>
+<div class="admonition tip">
+<p class="admonition-title">Customize Your Hotkeys</p>
+<p>To optimize your grooming experience, almost all operations in the GroomKit menu can be assigned to <a href="/hotkeys/commands/"><strong>custom hotkeys</strong></a> for a faster, uninterrupted workflow.</p>
+</div>
+<hr>
+<h2 id="automated-workflows">Automated Workflows</h2>
+<p>Speed up your blockout phase with faster guide placement and real-time visual feedback.</p>
+<!-- Conform/Snap Workflow -->
+<h3>Conform/Snap Workflow</h3>
+<p><em>Shape your silhouette quickly by snapping guides directly to a reference mesh—no need to worry about the underlying blockout topology.</em></p>
+<div class="layout-grid">
+  <div>
+    <ul>
+      <li><strong>Conform/Snap Button:</strong> Snap your selected guides down onto the surface.</li>
+      <li><strong>Magnet Icon:</strong> Automatically use your Base Mesh as the snap target.</li>
+      <li><strong>Set Target:</strong> Pick any custom mesh in your scene to snap guides to.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-conform-snap.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-conform-snap.gif" alt="Conform and Snap workflow to snap guides to a 3D reference mesh" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+</div>
+
+<!-- Live Mirror -->
+<h3 id="live-mirror">Live Mirror</h3>
+<p><em>By dynamically reflecting mirrored guide positions across the X-axis, this feature provides a better grooming experience with instant feedback</em></p>
+<div class="layout-grid">
+  <div>
+    <ul>
+      <li><strong>Mirror Button:</strong> Generate a static, one-time mirrored copy.</li>
+      <li><strong>Live Mirror:</strong> Mirror your guide edits instantly in real-time.</li>
+      <li><strong>Toggle Mirror:</strong> Hide mirrored guides and show simple gray proxies.</li>
+      <li><strong>Check Integrity:</strong> Scan and fix broken elements to maintain stability.</li>
+      <li><strong>Bake Position:</strong> Lock in final positions and clear out setup nodes.</li>
+      <li><strong>Discard:</strong> Delete the mirror setup and clean the node history.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-live-mirror.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-live-mirror.gif" alt="Live Mirror tool reflecting hair guide edits instantly across the X-axis" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+</div>
+<p><br></p>
+<hr>
+<h2 id="advanced-shaping-tools">🔧 Advanced Shaping Tools</h2>
+<p>Include toolset to manipulate both curves and guides in changing macro and micro CV control points</p>
+<div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-lattice.png" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-lattice.png" alt="Applying a 3x3 lattice deformer to XGen guides in GroomKit" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+    <span class="subtitle" style="margin-top: 2px; display: block; color: #555; text-align: center">Applying 3x3 lattice deformer.</span>
+</div>
+
+<p><br></p>
+<div class="layout-grid">
+  <!-- Lattice Deformer -->
+  <div>
+    <h3>Lattice Deformer</h3>
+    <p><em>Easily adjust the overall volume of your groom without losing your detailed sculpt work. This tool works seamlessly across XGen guides, Maya curves, and <a href="/profiles/braids/">procedurally generated braids</a>.</em></p>
+    <ol>
+      <li>Select a group of guides or curves.</li>
+      <li><strong>Division:</strong> Set the deformer resolution using the slider (e.g., 3x3x3).</li>
+      <li><strong>Shaping:</strong> Click <strong>Lattice</strong> and move the control points to shape selecting curves.</li>
+      <li><strong>Applying:</strong> Click <strong>Lattice</strong> again to apply the result.</li>
+      <li><strong>(Optional):</strong> Right-click the button for quick access to Accept, Cancel, and Preference options.</li>
+    </ol>
+  </div>
+  <div class="layout-img">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-lattice.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-lattice.gif" alt="Adjusting overall groom volume using the Lattice Deformer tool" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+
+  <!-- Smooth & Relax -->
+  <div>
+    <hr style="margin-top: 15px;">
+    <h3>Smooth &amp; Relax</h3>
+    <p><em>Perfect for cleaning up jittery mouse strokes and softening the flow of your hair.</em></p>
+    <ul>
+      <li><strong>Smooth:</strong> Removes sudden bumps and noise without shrinking the overall length of the hair.</li>
+      <li><strong>Relax:</strong> Creates beautiful, natural arcs. Higher values will gently pull a squiggly curve into a clean, sweeping C shape.</li>
+    </ul>
+  </div>
+  <div class="layout-img">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-misc-relax.gif" data-desc-position="bottom"><img src="/images/sculpt/groomkit-misc-relax.gif" alt="Smoothing and relaxing jittery curves to create natural hair arcs" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+  </div>
+</div>
+
+<p><br></p>
+<!-- !!! tip "Smoothing Methods"
+    The **Relax** button is preferred to achieve pleasing curvature without altering the original shape too much. -->
+
+<hr>
+<h2 id="hotkey-commands">Hotkey Commands</h2>
+<div class="admonition note">
+<p class="admonition-title">Utility Commands</p>
+<p><strong>Description Management:</strong>
+</p><pre class="highlight"><code class="language-python">import groomkit; groomkit.clumping()
+
+import groomkit; groomkit.auto_select()</code></pre>
+<strong>Target Tools:</strong>
+<pre class="highlight"><code class="language-python">import groomkit; groomkit.target("set")
+
+import groomkit; groomkit.target("move")
+
+import groomkit; groomkit.target("clear")</code></pre>
+<strong>Shaping Tools:</strong>
+<pre class="highlight"><code class="language-python">import groomkit; groomkit.switch()
+
+import groomkit; groomkit.extrude()
+
+import groomkit; groomkit.lattice()
+
+import groomkit; groomkit.lattice(3)
+
+import groomkit; groomkit.smooth()
+
+import groomkit; groomkit.relax()</code></pre><p></p>
+</div>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 35px;
+    align-items: start;
+}
+
+.layout-img {
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+}</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../interactive/" class="btn btn-neutral float-right" title="Interactive Tools">
+          Next: Interactive Tools <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../settings/" class="btn btn-neutral" title="Sculpt Tools">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Sculpt Tools
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../settings/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../interactive/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

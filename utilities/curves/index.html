@@ -1,0 +1,533 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/utilities/curves/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>Maya Curves - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Maya Curves";
+        var mkdocs_page_input_path = "utilities/curves.md";
+        var mkdocs_page_url = "/utilities/curves/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/utilities/curves/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="Maya Curves - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/utilities/curves/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Maya Curves</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#extract-curves-from-edges">Extract Curves from Edges</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extract-curves-from-cards">Extract Curves from Cards</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extract-curves-from-tubes">Extract Curves from Tubes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-extraction-options">Additional Extraction Options</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#general-maya-curve-operations">General Maya Curve Operations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-maya-curves-to-xgen-guides">Convert Maya Curves to XGen Guides</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hotkey-commands">Hotkey Commands</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Utilities</li>
+      <li class="breadcrumb-item active">Maya Curves</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="maya-curves-utilities">Maya Curves Utilities</h1>
+<p>The <strong>Curves</strong> utilities foldout is a powerhouse for hair translation in Maya. Whether you are building a groom from proxy geometry or simply need to manage native <strong>Maya curves</strong> before converting them into <strong>XGen guides</strong>, this section provides everything required to extract, clean, and convert your curve data efficiently.</p>
+<div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-curves-utilities.png" data-desc-position="bottom"><img src="/images/utils/groomkit-curves-utilities.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;" alt="One-click Maya curve extraction from existing hair assets in GroomKit"></a>
+    <span class="subtitle" style="margin-top: 2px; display: block; color: #555; text-align: center">One-click curve extraction from existing hair assets</span>
+</div>
+
+<p><br></p>
+<hr>
+<!-- 🧲 -->
+
+<h2 id="extract-curves-from-edges">Extract Curves from Edges</h2>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <p style="margin-top: 0; line-height: 1.5; margin-bottom: 12px;">Select a contiguous edge loop on a polygon mesh. GroomKit will rip it off and convert it into a clean, rebuilt NURBS curve. Available options:</p>
+    <ul style="margin-bottom: 0;">
+      <li><i><strong>CVs Count</strong>: controls extracted curves resolution</i></li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-edges.png" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-edges.png" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract Maya curves from polygon mesh edges"></a>
+  </div>
+
+  <div class="layout-content" style="border-bottom: 1px solid #e5e7eb;">
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Selected</strong> generates curves directly from the selected contiguous edge loops.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-edges-selected.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-edges-selected.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract selected edge loops to Maya curves"></a>
+  </div>
+</div>
+
+<p><br></p>
+<div style="height: 12px;"></div>
+
+<h2 id="extract-curves-from-cards">Extract Curves from Cards</h2>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <p style="margin-top: 0; line-height: 1.5; margin-bottom: 12px;">Select flat polygonal hair cards to serve as the proxy geometry. You can dictate exactly where the curves are generated along the card's surface. Available options:</p>
+    <ul style="margin-bottom: 0;">
+      <li style="font-size: 0.95em;"><i><strong>CVs Count</strong>: controls extracted curves resolution</i></li>
+      <li style="font-size: 0.95em;"><i><strong>Curves Count</strong>: controls the number of extracted curves</i></li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-cards.png" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-cards.png" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract Maya curves from polygonal hair cards"></a>
+  </div>
+
+  <div>
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Center</strong> extracts a single, perfect core curve running down the middle of the card.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-cards-center.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-cards-center.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract center core curves from hair cards"></a>
+  </div>
+
+  <div>
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Sides</strong> extracts two curves along the outer boundaries of the card.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-cards-sides.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-cards-sides.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract boundary curves from the sides of hair cards"></a>
+  </div>
+
+  <div class="layout-content" style="border-bottom: 1px solid #e5e7eb;">
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Shell</strong> extracts a perimeter of curves wrapped around the surface. You control the density with the <strong>Curves Count</strong> slider.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-cards-shell.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-cards-shell.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract a perimeter shell of curves from hair cards"></a>
+  </div>
+</div>
+
+<p><br></p>
+<div style="height: 12px;"></div>
+
+<h2 id="extract-curves-from-tubes">Extract Curves from Tubes</h2>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <p style="margin-top: 0; line-height: 1.5; margin-bottom: 12px;">Select 3D cylindrical hair meshes. GroomKit analyzes the volume of the tubes to generate core, surface, or concentric interior curves. Available options:</p>
+    <ul style="margin-bottom: 0;">
+      <li style="font-size: 0.95em;"><i><strong>CVs Count</strong>: controls extracted curves resolution</i></li>
+      <li style="font-size: 0.95em;"><i><strong>Curves Count</strong>: controls the number of extracted curves</i></li>
+      <li style="font-size: 0.95em;"><i><strong>Layers Count</strong>: controls the number of extracted layers</i></li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-tubes.png" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-tubes.png" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract Maya curves from 3D cylindrical hair tubes"></a>
+  </div>
+
+  <div>
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Center</strong> extracts a single, perfect core curve running down the middle of the tube.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-tubes-center.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-tubes-center.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract a center core curve from hair tubes"></a>
+  </div>
+
+  <div>
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Shell</strong> extracts a perimeter of curves wrapped around the surface. You control the density with the <strong>Curves Count</strong> slider.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-tubes-shell.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-tubes-shell.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract a perimeter shell of curves from hair tubes"></a>
+  </div>
+
+  <div>
+    <p style="margin: 0; font-size: 0.95em;"><strong>Extract Layers</strong> generates concentric rings of curves inside the volume of the tube. Controlled by the <strong>Layers Count</strong> slider.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-extract-tubes-layers.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-extract-tubes-layers.gif" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Extract concentric layers of curves from hair tubes"></a>
+  </div>
+</div>
+
+<h3 id="additional-extraction-options">Additional Extraction Options</h3>
+<p>Once you have chosen your extraction method, GroomKit offers several additional options and parameters to refine the resolution, organization, and orientation of the generated Maya curves. </p>
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 25px; text-align: left;">
+  <thead>
+    <tr style="background-color: #f0f0f0; border-bottom: 2px solid #ddd;">
+      <th style="padding: 10px; width: 35%;">Option</th>
+      <th style="padding: 10px; width: 65%;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f9f9f9; border-bottom: 1px solid #eee;">
+      <td style="padding: 10px; vertical-align: top;"><strong>Hide Meshes</strong></td>
+      <td style="padding: 10px; vertical-align: top;">Automatically hides the original proxy geometry after extraction to organize your viewport.</td>
+    </tr>
+    <tr style="background-color: #ffffff; border-bottom: 1px solid #eee;">
+      <td style="padding: 10px; vertical-align: top;"><strong>Merge Curves</strong></td>
+      <td style="padding: 10px; vertical-align: top;">Groups all extracted curves into a single, clean <code>xgExtract</code> group in the Outliner.</td>
+    </tr>
+    <tr style="background-color: #f9f9f9; border-bottom: 1px solid #eee;">
+      <td style="padding: 10px; vertical-align: top;"><strong>Flip Direction</strong></td>
+      <td style="padding: 10px; vertical-align: top;">Reverses the U/V calculation if your curves are generating sideways.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="admonition tip">
+<p class="admonition-title">Procedural Workflow</p>
+<p>Currently, to make use of the curve extraction engine, it's required your proxy geometry is standard and has extractable topology. Estimated curve extraction may be implemented in future versions.</p>
+<p>Further more, <a href="/profiles/operations/#xgen-guides-binding"><strong>GroomKit Profiles</strong></a> support non-destructive tube-based grooming, allowing you to block out your character's hair, extract it to guides, and shape them procedurally for complex XGen hairstyles without ever leaving Maya.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Topology Note</p>
+<p>Set the CVs Count slider to <strong><code>0</code></strong> to inherit the exact CV count from source geometry.</p>
+</div>
+<p><br></p>
+<hr>
+<h2 id="general-maya-curve-operations">General Maya Curve Operations</h2>
+<p>Quick utilities to sanitize your curve data before groom generation.</p>
+<ul>
+<li><strong>Toggle CVs:</strong> Instantly shows or hides the Control Vertices of the selected curves without digging into Maya's display menus.</li>
+<li><strong>Reverse Curves:</strong> Reverses the root-to-tip direction of the curve. <em>(Crucial: XGen assumes the first CV is the root. If your hair is growing into the head, use this!)</em></li>
+<li><strong>Select Roots:</strong> Automatically selects the first CV (<code>cv[0]</code>) of all currently selected curves.</li>
+<li><strong>Rebuild Curves:</strong> Opens Maya's native Rebuild Curve options for manual tweaking.</li>
+</ul>
+<div class="items-grid" style="margin-top: 30px;">
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-curves-toggle-cvs.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-curves-toggle-cvs.gif" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Toggle Curve CVs visibility in Maya"></a>
+    <small style="margin-top: 2px; display: block; color: #555; text-align: center">Toggle Curve CVs.</small>
+  </div>
+
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-curves-select-reverse.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-curves-select-reverse.gif" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;" alt="Select roots and reverse Maya curves direction"></a>
+    <small style="margin-top: 2px; display: block; color: #555; text-align: center">Select Roots and Reverse Curves.</small>
+  </div>
+</div>
+
+<p><br></p>
+<hr>
+<h2 id="convert-maya-curves-to-xgen-guides">Convert Maya Curves to XGen Guides</h2>
+<p>Instead of navigating nested UI layers in the standard XGen window, you can swiftly execute the curve-to-guide conversion directly from this panel using the following options:</p>
+<ul>
+<li><strong>Delete:</strong> Automatically deletes the original Maya curves after guide generation.</li>
+<li><strong>Dynamic Link (Preserve):</strong> Maintains the source Maya curves and creates a procedural link, ensuring XGen guides inherit any subsequent edits.</li>
+<li><strong>Add Guides:</strong> Executes the conversion based on your current configuration.</li>
+</ul>
+<div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-curves-convert.gif" data-desc-position="bottom"><img src="/images/utils/groomkit-curves-convert.gif" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;" alt="Convert Maya curves to XGen guides interface"></a>
+    <span class="subtitle" style="margin-top: 2px; display: block; color: #555; text-align: center">Insert XGen guides using GroomKit interface.</span>
+</div>
+
+<p><br></p>
+<hr>
+<h2 id="hotkey-commands">Hotkey Commands</h2>
+<p>Bind these to your hotkeys (Python mode) to speed up your extraction and conversion workflow.</p>
+<div class="admonition note">
+<p class="admonition-title">Curves Commands</p>
+<p><strong>Extract Curves (Uses current UI settings):</strong>
+</p><pre class="highlight"><code class="language-python">import groomkit; groomkit.extract.extract_curves()</code></pre>
+<strong>Reverse Selected Curves:</strong>
+<pre class="highlight"><code class="language-python">import groomkit; groomkit.curves.reverse_curves()</code></pre>
+<strong>Select Roots:</strong>
+<pre class="highlight"><code class="language-python">import groomkit; groomkit.curves.select_roots()</code></pre>
+<strong>Convert Curves to Guides:</strong>
+<pre class="highlight"><code class="language-python">import groomkit; groomkit.curves.to_guides()</code></pre><p></p>
+</div>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 35px;
+    row-gap: 40px;
+
+}
+
+.layout-content {
+   margin-bottom: -32px;
+}
+
+.layout-img {
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+      margin-bottom: 12px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+
+  .layout-content {
+     margin-bottom: 0px;
+  }
+
+  .layout-content +div {
+    margin-top: 20px;
+  }
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 30px;
+    align-items: start;
+}
+
+@media screen and (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../guides/" class="btn btn-neutral float-right" title="XGen Guides">
+          Next: XGen Guides <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../../sculpt/paint/" class="btn btn-neutral" title="Paint Tools">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Paint Tools
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../sculpt/paint/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../guides/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

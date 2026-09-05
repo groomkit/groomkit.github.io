@@ -1,0 +1,366 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/expressions/modifiers/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>XGen Modifiers - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "XGen Modifiers";
+        var mkdocs_page_input_path = "expressions/modifiers.md";
+        var mkdocs_page_url = "/expressions/modifiers/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/expressions/modifiers/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="XGen Modifiers - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/expressions/modifiers/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">XGen Modifiers</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#seexpr-expression-library">SeExpr Expression Library</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-magic-fx-button">The Magic FX Button ✨</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editing-saving-custom-seexpr-snippets">Editing &amp; Saving Custom SeExpr Snippets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python-commands-for-expressions">Python Commands for Expressions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Expressions</li>
+      <li class="breadcrumb-item active">XGen Modifiers</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="xgen-modifiers-seexpr-library">XGen Modifiers &amp; SeExpr Library</h1>
+<p>XGen's true power lies in <strong>SeExpr</strong>—the scripting language it uses to drive procedural variation, masks, and modifiers. While SeExpr is incredibly flexible, remembering exact syntax for randomizing cuts or adding stray hairs can interrupt creative grooming flow.</p>
+<div style="margin-top: -6px; margin-bottom: 24px">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/expressions/groomkit-expressions-stack.png" data-desc-position="bottom"><img src="/images/expressions/groomkit-expressions-stack.png" alt="Create beautiful hair style with GroomKit Expressions" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+</div>
+
+<p>The <strong>Expressions tab</strong> in GroomKit serves as an <strong>interactive SeExpr library</strong> of pre-written, high-performance snippets. More than just a text clipboard, GroomKit can automatically build and configure XGen modifiers for you.</p>
+<hr>
+<h2 id="seexpr-expression-library">SeExpr Expression Library</h2>
+<p>GroomKit categorizes SeExpr expressions based on specific grooming needs:</p>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <ul>
+      <li style="margin-bottom: 12px; font-size: 0.96em;"><strong>Basic Math:</strong> Randomize values using Random Sliders, Density Masks, and Random Boolean Masks.</li>
+      <li style="margin-bottom: 12px; font-size: 0.96em;"><strong>XGen Clumping:</strong> Advanced setups for cutting hair percentages within clumps or adding procedural noise offsets.</li>
+      <li style="margin-bottom: 12px; font-size: 0.96em;"><strong>Random Noise:</strong> Specialized expressions for root noise, flyaways, and stray hair isolation.</li>
+      <li style="margin-bottom: 12px; font-size: 0.96em;"><strong>Wind &amp; Procedural Cuts:</strong> Logic for wind direction, structural randomization, and automated hair cutting.</li>
+      <li style="margin-bottom: 12px; font-size: 0.96em;"><strong>Advanced Math:</strong> Complex expressions combining IDs, noise patterns, and custom map overrides.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/expressions/groomkit-expressions.png" data-desc-position="bottom"><img src="/images/expressions/groomkit-expressions.png" alt="GroomKit SeExpr Expression Library Interface" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<p>For a detailed walkthrough on applying modifiers to your grooming workflow, view our <a href="/video-tutorials">XGen Video Tutorials</a>.</p>
+<hr>
+<h2 id="the-magic-fx-button">The Magic <code>FX</code> Button ✨</h2>
+<p>The core of the Expressions tab is the <strong><code>fx</code> button</strong>, designed to automate the manual setup of XGen modifiers.</p>
+<div style="margin-bottom: 32px;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/expressions/groomkit-fx-button.gif" data-desc-position="bottom"><img src="/images/expressions/groomkit-fx-button.gif" alt="Using the GroomKit FX button to automate XGen modifiers" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+</div>
+
+<p>Instead of manually copying text, clicking the <code>fx</code> button executes a background script that:</p>
+<ol>
+<li><strong>Creates a new XGen Modifier</strong> (e.g., Noise or Cut) within active Description.</li>
+<li><strong>Configures attributes</strong> like Magnitude, Frequency, and Masking directly based on the chosen snippet.</li>
+<li><strong>Generates and bakes data</strong> for Clumping modifiers, automatically processing clumping points and region maps.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Example: Automating Flyaway Hair</p>
+<p>To quickly implement flyaways, locate <strong>"Flyaway Noise"</strong> under the Random Noise tab and click the <code>fx</code> icon. GroomKit automatically creates the modifier, applies the stray hair SeExpr, sets the Ramp scale, and updates the viewport in one click.</p>
+</div>
+<hr>
+<h2 id="editing-saving-custom-seexpr-snippets">Editing &amp; Saving Custom SeExpr Snippets</h2>
+<p>The text fields in GroomKit are fully editable, allowing you to customize math or values for your specific pipeline.</p>
+<ul>
+<li><strong>Refresh Icon:</strong> Restores the snippet to the GroomKit default code.</li>
+<li><strong>Copy Icon:</strong> Copies the SeExpr code to clipboard for manual use in the Maya XGen expression editor.</li>
+<li><strong>Write expressions to file:</strong> Located at the bottom of the UI, this saves your custom modifications to disk. GroomKit will automatically load these tailored expressions in future sessions.</li>
+</ul>
+<h2 id="python-commands-for-expressions">Python Commands for Expressions</h2>
+<p>You can also trigger expression saving via the GroomKit Python API:</p>
+<div class="admonition note">
+<p class="admonition-title">Expression Commands</p>
+<p><strong>Save expressions to disk via Python:</strong>
+</p><pre class="highlight"><code class="language-python">import groomkit
+
+# Save all current UI expressions to the local library
+groomkit.expression.write_expressions()</code></pre><p></p>
+</div>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 35px;
+    row-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+      margin-bottom: 12px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+
+  .rst-footer-buttons a {
+    font-size: 13px !important;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../snapshot/" class="btn btn-neutral float-right" title="Snapshot Modifiers">
+          Next: Snapshot Modifiers <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../../hotkeys/customization/" class="btn btn-neutral" title="Hotkey Customization">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Hotkey Customization
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../hotkeys/customization/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../snapshot/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

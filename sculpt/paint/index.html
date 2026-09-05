@@ -1,0 +1,396 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/sculpt/paint/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>Paint Tools - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Paint Tools";
+        var mkdocs_page_input_path = "sculpt/paint.md";
+        var mkdocs_page_url = "/sculpt/paint/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/sculpt/paint/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="Paint Tools - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/sculpt/paint/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Paint Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#simple-interface">Simple Interface</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-colors">Additional Colors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-region-density-mapping">Advanced Region - Density Mapping</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important-guideline">Important Guideline</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Sculpt</li>
+      <li class="breadcrumb-item active">Paint Tools</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="paint-tools-xgen-masks-region-mapping">Paint Tools: XGen Masks &amp; Region Mapping</h1>
+<p><strong>GroomKit Paint</strong> interface provides a simple yet versatile toolset to cover all essential painting steps in a typical XGen grooming workflow.</p>
+<p><br></p>
+<h2 id="simple-interface">Simple Interface</h2>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <ul style="margin-bottom: 25px; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+            <strong>Brush Profiles:</strong> Quickly switch between <strong>Gaussian</strong>, <strong>Soft</strong>, and <strong>Solid</strong> brush profiles.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Symmetry Toggle:</strong> Instantly mirror strokes across the X-axis to quickly block out base masks.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Primary Colors:</strong> 8 pure colors for clean region maps. Left-click to pick, or Right-click to flood the mesh.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Percentage Shading:</strong> Right-click White or Black to select exact grayscale opacities (20%–100%) for consistent effect maps.
+        </li>
+    </ul>
+  </div>
+
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-paint-settings.png" data-desc-position="bottom"><img src="/images/sculpt/groomkit-paint-settings.png" alt="GroomKit Paint simple interface showing brush profiles, symmetry toggle, and primary colors for XGen masks" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: -5px;"></a>
+  </div>
+</div>
+
+<h2 id="additional-colors">Additional Colors</h2>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <ul style="margin-bottom: 25px; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+            <strong>Randomize Color Palettes:</strong> The additional colors found in <strong>Utils/Preview</strong> can provide an easy color lookup experience.
+        </li>
+    </ul>
+  </div>
+
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/sculpt/groomkit-additional-colors.png" data-desc-position="bottom"><img src="/images/sculpt/groomkit-additional-colors.png" alt="Randomize Color Palettes tool for generating distinct region maps in GroomKit" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: -5px;"></a>
+  </div>
+</div>
+
+<p><br></p>
+<figure style="margin: 15px 0;">
+    <video aria-label="Symmetrical X-axis painting on a 3D scalp for XGen mask generation" controls="" autoplay="" loop="" muted="" playsinline="" style="width: 100%; border-radius: 6px; display: block;">
+        <source src="/images/sculpt/groomkit-paint-symmetry.mp4" type="video/mp4">
+    </video>
+    <figcaption style="margin-top: 8px; color: #555; text-align: center;">
+        Example of symmetrical X-axis painting on the scalp.
+    </figcaption>
+</figure>
+
+<p><br></p>
+<hr>
+<h2 id="advanced-region-density-mapping">Advanced Region - Density Mapping</h2>
+<p>This workflow lets you use region maps as density maps to prevent duplicate painting. It offers exact control over <em>where</em> hair grows and to <em>which</em> region it belongs, which is particularly beneficial for <a href="/profiles/operations/">procedurally tube-based grooming</a>.</p>
+<div style="display: block; margin-top: 15px; margin-bottom: 30px;">
+    <video aria-label="Advanced region map to density mapping workflow in Maya XGen using GroomKit" autoplay="" loop="" muted="" playsinline="" controls="" style="width: 100%; border-radius: 6px; display: block;">
+        <source src="/images/sculpt/groomkit-paint-advanced-region-mapping.mp4" type="video/mp4">
+    </video>
+    <span class="subtitle" style="margin-top: 8px; display: block; color: #555; text-align: center">Using Region map to drive Density control.</span>
+</div>
+
+<p><strong>Workflow steps:</strong></p>
+<div style="margin-bottom: 26px;">
+    <ol style="margin-bottom: 20px; line-height: 1.6;">
+        <li style="margin-bottom: 12px;">Locate the XGen snippets under <strong>Flows/Snippets</strong>.</li>
+        <li style="margin-bottom: 12px;">Apply both of the following snippets:
+            <ul style="margin-top: 10px;">
+                <li><strong>Set Region Map as Guide Color Map</strong></li>
+                <li><strong>Set Density Mask from Region Map</strong></li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<!-- !!! info "Note"
+    The XGen Snippets have been moved to <strong>Hotkeys/Snippets/XGen</strong> in the v1.0.0 release.
+ -->
+
+<p><br></p>
+<hr>
+<h2 id="important-guideline">Important Guideline</h2>
+<div class="admonition note">
+<p class="admonition-title">Save Frequently</p>
+<p>Due to the inherent instability of <strong>XGen</strong>'s baking tools, it is highly advisable to save your project and back up your files frequently during the painting phase to prevent potential data loss.</p>
+</div>
+<p><br></p>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 35px;
+    align-items: start;
+}
+
+.layout-img {
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+
+  .rst-footer-buttons a {
+    font-size: 14px !important;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../../utilities/curves/" class="btn btn-neutral float-right" title="Maya Curves">
+          Next: Maya Curves <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../interactive/move/" class="btn btn-neutral" title="Interactive Move">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Interactive Move
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../interactive/move/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../../utilities/curves/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

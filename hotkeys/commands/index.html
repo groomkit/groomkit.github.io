@@ -1,0 +1,628 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/hotkeys/commands/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>Hotkey Commands - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hotkey Commands";
+        var mkdocs_page_input_path = "hotkeys/commands.md";
+        var mkdocs_page_url = "/hotkeys/commands/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/hotkeys/commands/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="Hotkey Commands - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/hotkeys/commands/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Hotkey Commands</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#auto-registration">Auto Registration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#general-preview">General &amp; Preview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-sculpting-tools">Core Sculpting Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interactive-brushes">Interactive Brushes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-shaping-tools">Advanced Shaping Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#profiles-automation">Profiles Automation</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Hotkeys</li>
+      <li class="breadcrumb-item active">Hotkey Commands</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="groomkit-hotkeys">GroomKit Hotkeys</h1>
+<p>Grooming is a highly visual, iterative process. Every time you have to move your mouse away from your character to click a button in the UI, you break your creative flow state. </p>
+<p>GroomKit provides a comprehensive list of <strong>Python commands</strong> that mirror its UI functions. By binding these to your keyboard or tablet express keys, you can keep your cursor on your mesh and groom at lightning speed.</p>
+<div align="center">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/hotkeys/groomkit-hotkeys-editor.png" data-desc-position="bottom"><img src="/images/hotkeys/groomkit-hotkeys-editor.png" align="absmiddle" style="width: 85%; border-radius: 6px; margin-bottom: 8px;"></a>
+    <span class="subtitle" style="margin-top: 3px; display: block; color: #555; text-align: center">Auto-registered commands in the Hotkey Editor.</span>
+</div>
+
+<hr>
+<h2 id="auto-registration">Auto Registration</h2>
+<p>In the GroomKit UI under the <strong>Hotkeys</strong> tab, you will find a <strong>Register to Current Hotkeys Set</strong> button at the bottom of each category. Clicking this will automatically register all GroomKit commands into your active Maya Hotkey set.</p>
+<div class="layout-grid style=" margin-top:="" 20px;"="">
+  <div>
+    <p style="margin-bottom: 2px;">You can then open Maya's native Hotkey Editor via </p>
+    <p><strong><code>Windows &gt; Settings/Preferences &gt; Hotkey Editor</code></strong>, navigate to the <strong>Custom Scripts</strong> section under the <strong>GroomKit</strong> category, and easily assign your preferred keys.</p>
+    <ul>
+      <li style="font-size: 0.95em"><strong>Single Click:</strong> Copy Python command to clipboard.</li>
+    </ul>
+  </div>
+
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/hotkeys/groomkit-hotkeys-interactive.png" data-desc-position="bottom"><img src="/images/hotkeys/groomkit-hotkeys-interactive.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px; margin-top: 5px;"></a>
+  </div>
+</div>
+
+<hr>
+<h2 id="general-preview">General &amp; Preview</h2>
+<p>Essential viewport and XGen management tools to keep your scene running smoothly.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 256px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>XGen Window</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.xgen()</code></td>
+<td style="text-align: left;">Opens or focuses the native XGen UI.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Update Preview</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.preview()</code></td>
+<td style="text-align: left;">Refreshes the generated XGen primitives.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Clear Preview</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.clear_preview()</code></td>
+<td style="text-align: left;">Clears the generated XGen primitives.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="core-sculpting-tools">Core Sculpting Tools</h2>
+<p>The bread and butter of traditional XGen guide manipulation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 256px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sculpt Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.sculpt()</code></td>
+<td style="text-align: left;">Standard sculpt brush with selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Create Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.create()</code></td>
+<td style="text-align: left;">Add new guides onto the mesh surface.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Normalize Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.normalize()</code></td>
+<td style="text-align: left;">Normalize curves cvs spacing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rebuild Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.rebuild()</code></td>
+<td style="text-align: left;">Rebuilds CVs without changing shape.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rebuild Guides (8)</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.rebuild(8)</code></td>
+<td style="text-align: left;">Rebuilds guides specifically to 8 CVs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mirror Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.mirror()</code></td>
+<td style="text-align: left;">Mirrors guides symmetrically on X-axis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Copy Shape</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.shape('copy')</code></td>
+<td style="text-align: left;">Copies the shape of the selected guide.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Paste Shape</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.shape('paste')</code></td>
+<td style="text-align: left;">Pastes copied shape onto target guides.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lock Length</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.lock_length()</code></td>
+<td style="text-align: left;">Preserves guide length during editing.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Volumetric Falloff</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.volumetric()</code></td>
+<td style="text-align: left;">Toggles a volumetric selection radius.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="interactive-brushes">Interactive Brushes</h2>
+<p>GroomKit provides plug-and-play hotkeys for the interactive brush toolset along with a radial menu. Binding these commands to your preferred key combinations is highly recommended for an intuitive grooming experience.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 230px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sculpt Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.sculpt()</code></td>
+<td style="text-align: left;">Standard sculpt brush with soft selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Create Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.create()</code></td>
+<td style="text-align: left;">Standard create brush to add new curves.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Draw Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.draw()</code></td>
+<td style="text-align: left;">Freehand draws curves directly onto mesh.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Add Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.add()</code></td>
+<td style="text-align: left;">Click and drag to plant clusters of hair.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cut Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.cut()</code></td>
+<td style="text-align: left;">Dynamically trim curve with mouse gesture.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Attach Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.attach()</code></td>
+<td style="text-align: left;">Attach new segments to selected guides.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move Brush</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.move()</code></td>
+<td style="text-align: left;">Slides guides across boundary surface.</td>
+</tr>
+</tbody>
+</table>
+<p>Automated commands for auto selection and auto clumping.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 260px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Auto Description</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.auto_select()</code></td>
+<td style="text-align: left;">Auto select XGen description.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Clumping Maps</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.clumping()</code></td>
+<td style="text-align: left;">Generate point maps across modifiers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="advanced-shaping-tools">Advanced Shaping Tools</h2>
+<p>Tools for procedural shaping and extending curves, guides, and profiles.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 235px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Lattice Tool</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.lattice()</code></td>
+<td style="text-align: left;">Apply lattice deformer to selected guides.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lattice Tool (5)</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.lattice(5)</code></td>
+<td style="text-align: left;">Creates a higher-resolution 5x5x5 lattice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Extrude Tool</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.extrude()</code></td>
+<td style="text-align: left;">Seamlessly extends the tip of a curve/guide.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Switch Tool</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.switch()</code></td>
+<td style="text-align: left;">Repeatedly switch between Guide and Curve.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Smooth Tool</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.smooth()</code></td>
+<td style="text-align: left;">Applies standard smoothing to remove jitter.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Relax Tool</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.relax()</code></td>
+<td style="text-align: left;">Applies relax smoothing to ease curve arcs.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 256px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Set Target</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.target('set')</code></td>
+<td style="text-align: left;">Sets selected guide as the active target.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.target('move')</code></td>
+<td style="text-align: left;">Shapes selected guides to target guide.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Clear Target</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.target('clear')</code></td>
+<td style="text-align: left;">Clears the active target reference sphere.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Snap Guides</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.snap('snap')</code></td>
+<td style="text-align: left;">Snaps guides to assigned geometry.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move Root</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.root('move')</code></td>
+<td style="text-align: left;">Translates guide root CV positions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move Tip</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.tip('move')</code></td>
+<td style="text-align: left;">Translates guide tip CV positions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Apply Profile</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.profile()</code></td>
+<td style="text-align: left;">Applies width and taper profile to guides.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="profiles-automation">Profiles Automation</h2>
+<p>Automated commands and buttons to work seamlessly with Profiles layers.</p>
+<div align="center" style="margin-bottom: 24px;">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/hotkeys/groomkit-hotkeys-profiles.png" data-desc-position="bottom"><img src="/images/hotkeys/groomkit-hotkeys-profiles.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;"></a>
+    <span class="subtitle" style="margin-top: 3px; display: block; color: #555; text-align: center">Instant access to the corresponding layer by selecting bound guides.</span>
+</div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><div style="width: 100px;">Action</div></th>
+<th style="text-align: left;"><div style="width: 300px;">Python Command</div></th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Create Layer</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.profile.create()</code></td>
+<td style="text-align: left;">Create a new layer on the active profile.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Select Layers</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.profile.select()</code></td>
+<td style="text-align: left;">Automatically retrieve and select the layer from the current selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cycle Visibility</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.profile.visibility()</code></td>
+<td style="text-align: left;">Quickly detect and cycle selected layers between Visible and Template modes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auto Select</strong></td>
+<td style="text-align: left;"><code>import groomkit; groomkit.profile.auto_select()</code></td>
+<td style="text-align: left;">Toggle the Auto Select checkbox for the current profile type.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 35px;
+    row-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+      margin-bottom: 12px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+
+  .rst-footer-buttons a {
+    font-size: 13px !important;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../customization/" class="btn btn-neutral float-right" title="Hotkey Customization">
+          Next: Hotkey Customization <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../../utilities/preview/" class="btn btn-neutral" title="Profile Preview">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Profile Preview
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../utilities/preview/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../customization/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

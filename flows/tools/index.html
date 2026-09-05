@@ -1,0 +1,393 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/flows/tools/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>GroomKit Tools - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GroomKit Tools";
+        var mkdocs_page_input_path = "flows/tools.md";
+        var mkdocs_page_url = "/flows/tools/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/flows/tools/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Professional tools for Maya to scatter, fill, snap, and transform grooming curves efficiently.">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="GroomKit Tools - GroomKit Plugin">
+  <meta property="og:description" content="Professional tools for Maya to scatter, fill, snap, and transform grooming curves efficiently.">
+  <meta property="og:url" content="https://groomkit.github.io/flows/tools/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/shaders/">Hair Shaders</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../utilities/preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">GroomKit Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#curve-fill">Curve Fill</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#curve-snap">Curve Snap</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#curve-scatter">Curve Scatter</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#curve-transform">Curve Transform</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clump-spread">Clump / Spread</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">GroomKit Flows</li>
+      <li class="breadcrumb-item active">GroomKit Tools</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="groomkit-tools">GroomKit Tools</h1>
+<p><strong>GroomKit Tools</strong> provides a set of curve manipulation utilities designed specifically for hair and fur grooming in Maya. These tools automate common operations such as scattering, shaping, snapping, and transforming multiple curves to streamline the overall grooming workflow.</p>
+<hr>
+<h3 id="curve-fill">Curve Fill</h3>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Tools for curves generation within empty spaces or along specific geometries.</p>
+    <ul style="font-size: 0.95em;">
+      <li style="margin-bottom: 16px;"><strong>Tube:</strong> Generates a central curve from a cylindrical mesh or scatters curves within a volumetric space defined by selected boundary curves.</li>
+      <li style="margin-bottom: 16px;"><strong>Card:</strong> Generates evenly spaced curves between two boundary curves or across a flat polygon card. Useful for converting polygon hair cards into curve-based grooms.</li>
+      <li style="margin-bottom: 16px;"><strong>Deform:</strong> Offsets curves outward along the underlying mesh surface normals to resolve geometry clipping, utilizing a preserve setting to keep root positions locked in place.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/flows/groomkit-flows-curve-fill.png" data-desc-position="bottom"><img src="/images/flows/groomkit-flows-curve-fill.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<hr>
+<h3 id="curve-snap">Curve Snap</h3>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Attaches curve roots to the closest point on a designated base mesh.</p>
+    <ul style="font-size: 0.95em;">
+      <li style="margin-bottom: 16px;"><strong>Snap to Base Mesh:</strong> Evaluates the root position of selected curves and translates them precisely onto the nearest geometry.</li>
+      <li style="margin-bottom: 16px;"><strong>Retain &amp; Falloff:</strong> Controls the structural preservation of the curve during the snapping process. <em>Retain</em> protects the upper curve shape, while <em>Falloff</em> determines the transition blend from the snapped root into the rest of the strand.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/flows/groomkit-flows-curve-snap.png" data-desc-position="bottom"><img src="/images/flows/groomkit-flows-curve-snap.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<hr>
+<h3 id="curve-scatter">Curve Scatter</h3>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Distributes curves uniformly across a selected mesh based on area-weighted sampling.</p>
+    <ul style="font-size: 0.95em;">
+      <li style="margin-bottom: 16px;"><strong>Reference Curve:</strong> Utilizes a designated guide or curve as a structural reference. Generated curves inherit its overall shape and orientation.</li>
+      <li style="margin-bottom: 16px;"><strong>Smart Distribution:</strong> Spatially calculates curve placement based on mesh surface area to prevent dense overlapping, requiring inputs for length, total curve count, and CV count.</li>
+      <li style="margin-bottom: 16px;"><strong>Symmetry:</strong> Mirrors the generated curves across the Object or Global X-axis to establish symmetrical grooming bases.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/flows/groomkit-flows-curve-scatter.png" data-desc-position="bottom"><img src="/images/flows/groomkit-flows-curve-scatter.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<hr>
+<h3 id="curve-transform">Curve Transform</h3>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Utilities for selecting and transforming multiple curves in bulk.</p>
+    <ul style="font-size: 0.95em;">
+      <li style="margin-bottom: 16px;"><strong>Random Select:</strong> Selects a randomized percentage of curves from the current selection pool based on a slider value.</li>
+      <li style="margin-bottom: 16px;"><strong>Pivot to Root:</strong> Snaps the transform pivot of all selected curves directly to their respective root coordinates.</li>
+      <li style="margin-bottom: 16px;"><strong>Batch Mode:</strong> Configures tools to use local object pivots and smooth soft-selection, enabling simultaneous local scaling or rotation across multiple selected curves.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/flows/groomkit-flows-curve-transform.png" data-desc-position="bottom"><img src="/images/flows/groomkit-flows-curve-transform.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<hr>
+<h3 id="clump-spread">Clump / Spread</h3>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Modifies the spacing of selected curves by pulling them toward or pushing them away from a central axis.</p>
+    <ul style="font-size: 0.95em;">
+      <li style="margin-bottom: 16px;"><strong>Clump &amp; Spread:</strong> Applies an inward (clump) or outward (spread) translation to selected curves based on a Reference curve. If no reference is provided, an average centroid is automatically calculated.</li>
+      <li style="margin-bottom: 16px;"><strong>Profile Ramp:</strong> Dictates the strength and falloff of the clump or spread effect along the length of the curve, from root to tip.</li>
+      <li style="margin-bottom: 16px;"><strong>Strength:</strong> A multiplier for the overall intensity of the clump or spread operation.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/flows/groomkit-flows-clump-spread.png" data-desc-position="bottom"><img src="/images/flows/groomkit-flows-clump-spread.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px"></a>
+  </div>
+</div>
+
+<p><br></p>
+<div class="admonition note">
+<p class="admonition-title">Workflow Application</p>
+<p>These tools can be used sequentially. For instance, applying <strong>Curve Scatter</strong> to generate a base layout, using <strong>Curve Transform (Batch Mode)</strong> for initial orientation, and applying <strong>Clump / Spread</strong> for final profile adjustments.</p>
+</div>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    column-gap: 35px;
+    row-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+      margin-bottom: 12px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+
+  .rst-footer-buttons a {
+    font-size: 13.5px !important;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../snippets/" class="btn btn-neutral float-right" title="GroomKit Snippets">
+          Next: GroomKit Snippets <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../../profiles/braids/" class="btn btn-neutral" title="Braids Profile">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Braids Profile
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../profiles/braids/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../snippets/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>

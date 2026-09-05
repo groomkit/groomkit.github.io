@@ -1,0 +1,516 @@
+<!DOCTYPE html><html class="writer-html5" lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://groomkit.github.io/utilities/shaders/">
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+  
+    <title>Hair Shaders - GroomKit Plugin</title>
+  
+
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="../../css/theme_extra.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <link href="../../styles/global.css" rel="stylesheet">
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hair Shaders";
+        var mkdocs_page_input_path = "utilities/shaders.md";
+        var mkdocs_page_url = "/utilities/shaders/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  <!-- 1. Canonical URL (Fixes URL Canonicalization Issues) -->
+  
+    <link rel="canonical" href="https://groomkit.github.io/utilities/shaders/">
+  
+
+  <!-- 2. Meta Description (Fixes Critical Missing Meta Description Error) -->
+  <meta name="description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  
+  <!-- 3. Social Media Meta Tags (Fixes Missing Social Tags Warning) -->
+  <meta property="og:title" content="Hair Shaders - GroomKit Plugin">
+  <meta property="og:description" content="Specialized 3D Grooming &amp; Procedural Hair Plugin for XGen (Maya 2027+)">
+  <meta property="og:url" content="https://groomkit.github.io/utilities/shaders/">
+  <meta property="og:type" content="website">
+
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NXTLN9HY8P"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-NXTLN9HY8P");
+      </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+  <a href="../.." class="icon icon-home"> GroomKit Plugin</a>
+  
+  
+  <div style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 15px; font-size: 0.85em; margin-top: -5px;">
+    v1.0.5
+  </div>
+  
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../video-tutorials/">Video Tutorials</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../links-support/">Links &amp; Support</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Sculpt</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/settings/">Sculpt Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/misc/">Misc Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/">Interactive Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/sculpt/">Interactive Sculpt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/add/">Interactive Add</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/cut/">Interactive Cut</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/draw/">Interactive Draw 🖌️</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/attach/">Interactive Attach</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/interactive/move/">Interactive Move</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sculpt/paint/">Paint Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Utilities</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../curves/">Maya Curves</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/">XGen Guides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../simulation/">Simulation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Hair Shaders</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#applying-hair-shader-presets">Applying Hair Shader Presets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#shader-preset-breakdown">Shader Preset Breakdown</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#procedural-hair-color-variation-var">Procedural Hair Color Variation (Var)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-create-custom-hair-shaders">How to Create Custom Hair Shaders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#customize-maya-hairphysicalshader">Customize Maya hairPhysicalShader</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customize-arnold-aistandardhair">Customize Arnold aiStandardHair</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#saving-custom-shader-presets">Saving Custom Shader Presets</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preview/">Profile Preview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Hotkeys</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/commands/">Hotkey Commands</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../hotkeys/customization/">Hotkey Customization</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Expressions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/modifiers/">XGen Modifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../expressions/snapshot/">Snapshot Modifiers</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Profiles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/operations/">Operations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/cards/">Cards Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/tubes/">Tubes Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/twists/">Twists Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/curls/">Curls Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../profiles/braids/">Braids Profile</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit Flows</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/tools/">GroomKit Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../flows/snippets/">GroomKit Snippets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">GroomKit License</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/studio-license/">Studio License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../license/terms-and-policy/">Terms and Policy</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">GroomKit Plugin</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Utilities</li>
+      <li class="breadcrumb-item active">Hair Shaders</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="xgen-hair-shaders">XGen Hair Shaders</h1>
+<p>Assigning and tweaking hair materials in Maya's XGen can be a tedious process involving the Hypershade and hunting down specific shading nodes. GroomKit's <strong>Shaders</strong> module acts as an instant material library and procedural variation engine for fast viewport look-dev.</p>
+<div align="center" style="margin-bottom: 30px;">
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shaders-preview.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shaders-preview.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;" alt="GroomKit hair shaders and color presets for Maya XGen look-dev"></a>
+    <span class="subtitle" style="margin-top: 2px; display: block; color: #555; text-align: center">GroomKit Hair Shaders.</span>
+</div>
+
+<hr>
+<h2 id="applying-hair-shader-presets">Applying Hair Shader Presets</h2>
+<p>GroomKit ships with several built-in realtime hair shader presets, while also offering full support for creating your own custom palettes.</p>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <ul>
+      <li><strong>Color Swatches:</strong> Previews the Root, Tip, and Primary Highlight colors of the preset. Clicking on them focuses the Attribute Editor.</li>
+      <li><strong>Apply Button:</strong> Applies the shader preset to the <strong>active</strong> XGen description.</li>
+      <li><strong>Var Button:</strong> Applies procedural clump-based color variation on top of the shader preset.</li>
+      <li><strong>Double-Click:</strong> Cascades the shader preset or variation to <strong>all</strong> descriptions in the current collection.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-hair-shaders.png" data-desc-position="bottom"><img src="/images/utils/groomkit-hair-shaders.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="Applying GroomKit hair shader presets to XGen descriptions"></a>
+  </div>
+</div>
+
+<p>Shader presets are highly configurable and highly reusable between projects. Users can either use the built-in library or create new custom shaders that can be applied with just a single click.</p>
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: start;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-amber.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-amber.png" style="width: 100%; border-radius: 6px; display: block;" alt="Amber hair shader preset preview"></a>
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-ambient.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-ambient.png" style="width: 100%; border-radius: 6px; display: block;" alt="Ambient brown hair shader preset preview"></a>
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-peach.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-peach.png" style="width: 100%; border-radius: 6px; display: block;" alt="Peach blonde hair shader preset preview"></a>
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-pink.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-pink.png" style="width: 100%; border-radius: 6px; display: block;" alt="Pink stylized hair shader preset preview"></a>
+
+  <!-- <img src="/images/utils/groomkit-shader-teal.png" style="width: 100%; border-radius: 6px; display: block;" alt="Teal cyan hair shader preset preview">
+  <img src="/images/utils/groomkit-shader-purple.png" style="width: 100%; border-radius: 6px; display: block;" alt="Purple violet hair shader preset preview">
+  <img src="/images/utils/groomkit-shader-silver.png" style="width: 100%; border-radius: 6px; display: block;" alt="Silver white hair shader preset preview">
+  <img src="/images/utils/groomkit-shader-dark.png" style="width: 100%; border-radius: 6px; display: block;" alt="Dark black hair shader preset preview"> -->
+</div>
+
+<!-- <span class="subtitle" style="margin-top: 10px; display: block; color: #555; text-align: center;">Builtin presets with various color shades.</span> -->
+
+<figure style="margin: 10px 0 15px 0;">
+    <video controls="" autoplay="" loop="" muted="" playsinline="" style="width: 100%; border-radius: 6px; display: block;">
+        <source src="/images/utils/groomkit-shader-preview.mp4" type="video/mp4">
+    </video>
+    <figcaption style="margin-top: 12px; color: #555; text-align: center;">
+        Applying shaders in real-time viewport.
+    </figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Customization</p>
+<p>While the built-in presets provided by GroomKit serve simply as a starting point, the true power of the Shader module lies in its flexibility. Users are encouraged to create their own custom shader presets to aid in look-dev during the grooming process.</p>
+</div>
+<hr>
+<h3 id="shader-preset-breakdown">Shader Preset Breakdown</h3>
+<div style="margin-bottom: 10px;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-row.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-row.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="GroomKit hair shader preset UI row breakdown"></a>
+</div>
+
+<p>A preset row is a quick preview of the hair material to be applied to your XGen description. It provides immediate functionality through buttons and color swatches.</p>
+<ul>
+<li><strong>Preset Name:</strong> The name of the hair shader preset (either built-in or user-generated).</li>
+<li><strong>Color Swatches:</strong> A brief preview of the root, tip, and highlight colors. Clicking any of these will open and focus the connected hair shader material in the Attribute Editor for customization.</li>
+<li><strong>Apply Button:</strong> Applies the preset to the currently active XGen description.</li>
+<li><strong>Var Button:</strong> Adds a procedural expression on top of the shader to produce clump-based color variation.</li>
+<li><strong>(Double Click):</strong> Double-clicking either <code>Apply</code> or <code>Var</code> will execute the action across <strong>all descriptions</strong> in the currently active XGen collection.</li>
+<li><strong>Right Mouse Click:</strong> Right-clicking the preset name allows you to restore a built-in preset to its factory default, or delete a user-created preset entirely.</li>
+</ul>
+<p><br></p>
+<hr>
+<h2 id="procedural-hair-color-variation-var">Procedural Hair Color Variation (Var)</h2>
+<p>Perfectly uniform hair color can look synthetic. Real hair has micro-variations in lightness and darkness on a per-strand basis. The <strong>Var</strong> (Variation) button injects a complex procedural noise expression into XGen's GLRenderer, giving you viewport sliders to control the chaos.</p>
+<div style="margin-bottom: 30px;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-variation.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-variation.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-top: 20px;" alt="Applying procedural clump-based color variation to Maya hair"></a>
+  <span class="subtitle" style="margin-top: 5px; display: block; color: #555; text-align: center">Applying clump-based color variation.</span>
+</div>
+
+<p>Once applied, you can adjust these properties in the <strong>XGen Editor Window</strong> under the <strong>Preview/Output &gt; Primitive Color</strong> tab:</p>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <ul>
+      <li><strong>Freq (Frequency):</strong> Controls the scale and density of the variation noise. Lower values create larger, broader patches of grouped colors. Higher values generate finer, more chaotic, strand-by-strand detail.</li>
+      <li><strong>Seed:</strong> Changes the random starting point of the noise pattern. Adjust this to quickly shuffle the variation layout without changing the scale.</li>
+      <li><strong>Min:</strong> Defines the darkest lightness value/multiplier of the color variation.</li>
+      <li><strong>Max:</strong> Defines the brightest lightness value/multiplier of the color variation.</li>
+    </ul>
+
+    <p><em>(Note: To clear the variation and return to a flat color, right-click the Var button and select "Clear", or simply re-click the <code>Apply</code> button.)</em></p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-variation-preview.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-variation-preview.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="XGen primitive color noise variation attributes"></a>
+  </div>
+</div>
+
+<p><br></p>
+<hr>
+<h2 id="how-to-create-custom-hair-shaders">How to Create Custom Hair Shaders</h2>
+<div class="admonition warning">
+<p class="admonition-title">Advanced Customization</p>
+<p>The provided shaders might not always give the exact look you're looking for. Because of this, we encourage you to experiment with the shader parameters to match your vision and understand how they work.</p>
+</div>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>Hair shaders in GroomKit are grouped into two categories:</p>
+    <ul>
+      <li><strong>hairPhysicalShader:</strong> Maya's standard viewport-friendly shader that comes natively with XGen descriptions.</li>
+      <li><strong>aiStandardHair:</strong> Arnold's realism-based shader featuring advanced highlight, transmission, and melanin controls.</li>
+    </ul>
+    <p><strong>Customizing:</strong> Apply a preset, then click any of its <strong>Color Swatches</strong> to instantly focus the Attribute Editor on that exact active shader node.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-categories.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-categories.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px;" alt="hairPhysicalShader and aiStandardHair material categories in Maya"></a>
+  </div>
+</div>
+
+<hr>
+<h3 id="customize-maya-hairphysicalshader">Customize Maya hairPhysicalShader</h3>
+<details>
+<summary style="cursor: pointer; opacity: 0.7;"><i>Click to expand configuration parameters...</i></summary>
+
+<p style="margin-top: 15px;">The <code>hairPhysicalShader</code> is great for fast viewport look-dev and stylized grooms.</p>
+
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <ul>
+      <li><strong>Root / Tip Color:</strong> Drives the primary base color gradient of the hair strand.</li>
+      <li><strong>Diffuse Weight:</strong> Controls how strongly the Root and Tip colors are displayed. A value of 0 means the hair is entirely driven by highlights.</li>
+      <li><strong>Primary / Secondary Highlight Color:</strong> Drives the color and tint of the hair's gloss and shine.</li>
+      <li><strong>Other Parameters:</strong> Attributes like <em>Scatter</em>, <em>Shift</em>, and <em>Transmission</em> offer subtle stylistic changes to the visual effect and can generally be left at default for standard looks.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-hairPhysicalShader.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-hairPhysicalShader.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="Customizing Maya hairPhysicalShader root and tip colors"></a>
+  </div>
+</div>
+
+</details>
+
+<hr>
+<h3 id="customize-arnold-aistandardhair">Customize Arnold aiStandardHair</h3>
+<details>
+<summary style="cursor: pointer; opacity: 0.7;"><i>Click to expand configuration parameters...</i></summary>
+
+<p style="margin-top: 15px;">The <code>aiStandardHair</code> is Arnold's physically accurate hair model, relying on melanin rather than simple diffuse colors.</p>
+
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <ul>
+      <li><strong>Melanin &amp; Melanin Redness:</strong> The primary driver for realistic hair. <code>0.0</code> yields blonde/white hair, while <code>1.0</code> yields black hair. Melanin Redness adds auburn/ginger tones.</li>
+      <li><strong>Roughness:</strong> Controls the sharpness of the specular highlight. Lower values create shiny/glossy hair, while higher values create dry/matte hair.</li>
+      <li><strong>Specular Tints:</strong> Allows you to tint the natural white highlights with specific colors (great for faking colored lighting or dyed reflections).</li>
+      <li><strong>Diffuse Color &amp; Weight:</strong> Used specifically for dyed, painted, or stylized hair. Increasing the diffuse weight overrides the natural Melanin calculation with the chosen Diffuse Color.</li>
+    </ul>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-aiStandardHair.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-aiStandardHair.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="Customizing Arnold aiStandardHair melanin attributes"></a>
+  </div>
+</div>
+
+</details>
+
+<hr>
+<h2 id="saving-custom-shader-presets">Saving Custom Shader Presets</h2>
+<p>Once you have tweaked a shader in the Attribute Editor to your liking, you can save it to GroomKit for future use. There are two ways to do this:</p>
+<h4 id="1-automated-method-override-existing-preset">1. Automated Method (Override existing preset)</h4>
+<div class="layout-grid" style="margin-top: 20px; margin-bottom: 30px;">
+  <div>
+    <p>If you are tweaking a preset that is <em>already applied</em> from the GroomKit UI, GroomKit tracks it.</p>
+    <p>Simply click the <strong>Apply</strong> button on that <em>same</em> preset row again. GroomKit will detect the changes and automatically overwrite the preset file with your new settings.</p>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-automated.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-automated.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="Saving and overwriting XGen hair shader presets automatically"></a>
+  </div>
+</div>
+
+<h4 id="2-manual-method-create-new-preset">2. Manual Method (Create new preset)</h4>
+<p>If you want to save your tweaks as an entirely new preset without overwriting an old one:</p>
+<div class="layout-grid" style="margin-top: 20px;">
+  <div>
+    <ol>
+      <li>Ensure the Attribute Editor is focused on your active <code>hairPhysicalShader</code> or <code>aiStandardHair</code>.</li>
+      <li>Click the <strong>Presets*</strong> button at the top right of the Attribute Editor.</li>
+      <li>Select <strong>Save [Node] Preset...</strong> and give it a name.</li>
+      <li>In the GroomKit Shaders UI, click the large <strong>Reload all Hair Shader Presets</strong> button.</li>
+    </ol>
+
+    <br>
+
+    <p>A new material will instantly appear in the <strong>User Presets</strong> section!</p>
+    <br>
+  </div>
+  <div>
+    <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-delete.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-delete.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-bottom: 8px" alt="Deleting custom hair shader presets in the GroomKit UI"></a>
+    <span class="subtitle" style="margin-top: 5px; display: block; color: #555; text-align: center">(Removing built-in presets)</span>
+  </div>
+</div>
+
+<div style="margin-bottom: 30px;">
+  <a class="glightbox" data-type="image" data-width="100%" data-height="aut" href="/images/utils/groomkit-shader-manual.png" data-desc-position="bottom"><img src="/images/utils/groomkit-shader-manual.png" align="absmiddle" style="width: 100%; border-radius: 6px; margin-top: 20px;" alt="Manually saving custom Maya hair materials as presets via Attribute Editor"></a>
+  <span class="subtitle" style="margin-top: 5px; display: block; color: #555; text-align: center">Saving custom hair shader.</span>
+</div>
+
+<div class="admonition note">
+<p class="admonition-title">Restoring Shader Presets</p>
+<p>Right-click the name of any built-in shader preset and select <strong>Reset</strong> to restore its colors and parameters back to factory defaults. Right-clicking a User Preset will allow you to <strong>Delete</strong> it.</p>
+</div>
+<style>
+.layout-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 35px;
+    row-gap: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-grid {
+      grid-template-columns: 1fr !important;
+      column-gap: 15px; 
+      row-gap: 10px;
+      margin-bottom: 12px;
+  }
+
+  .layout-img {
+    margin-top: 0px;
+  }
+
+  .layout-grid + h2,
+  .layout-grid + h3 {
+    margin-top: 36px;
+  }
+
+  .layout-grid + h4 {
+    margin-top: 24px;
+  }
+}
+</style>
+              
+            </div>
+          </div><footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <!-- Modified to show the title of the next page -->
+        <a href="../preview/" class="btn btn-neutral float-right" title="Profile Preview">
+          Next: Profile Preview <span class="icon icon-circle-arrow-right"></span>
+        </a>
+      
+      
+      
+        <!-- Modified to show the title of the previous page -->
+        <a href="../simulation/" class="btn btn-neutral" title="Simulation">
+          <span class="icon icon-circle-arrow-left"></span> Previous: Simulation
+        </a>
+      
+
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    
+      <p>© Copyright 2026, Izulab GroomKit.</p>
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../simulation/" style="color: #fcfcfc">« Previous</a></span>
+    
+    
+      <span><a href="../preview/" style="color: #fcfcfc">Next »</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "none", "closeEffect": "none", "slideEffect": "slide"});
+</script></body></html>
